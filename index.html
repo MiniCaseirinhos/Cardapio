@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Caseirinhos — Cardápio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css_js/style.css">
+</head>
+<body>
+
+<header>
+  <h1 class="brand">Mini Caseirinhos</h1>
+  <h2 class="headline">CARDÁPIO</h2>
+  <button id="view-cart">🛒 Ver Carrinho</button>
+</header>
+
+<main class="page">
+  <section class="menu">
+
+    <article class="item">
+      <figure class="thumb"><img src="./img/prestígio.jpeg" alt="Prestígio"/></figure>
+      <h3 class="name">PRESTÍGIO</h3>
+      <div class="price">R$ 19,90</div>
+      <p class="desc">Massa de chocolate, com recheio de prestígio, finalizado com um bombom.</p>
+      <button class="add-to-cart" data-name="PRESTÍGIO" data-price="19.90">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="item">
+      <figure class="thumb"><img src="./img/ninho com nutella.jpeg" alt="Ninho com Nutella"/></figure>
+      <h3 class="name">NINHO COM NUTELLA</h3>
+      <div class="price">R$ 22,90</div>
+      <p class="desc">Massa de baunilha com recheio de nutella e cobertura cremosa de ninho, finalizado com nutella e brigadeiro de ninho.</p>
+      <button class="add-to-cart" data-name="NINHO COM NUTELLA" data-price="22.90">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="item">
+      <figure class="thumb"><img src="./img/cenoura.jpeg" alt="Cenoura"/></figure>
+      <h3 class="name">CENOURA</h3>
+      <div class="price">R$ 19,90</div>
+      <p class="desc">Massa de cenoura com cobertura cremosa de chocolate, finalizado com granulado e brigadeiro.</p>
+      <button class="add-to-cart" data-name="CENOURA" data-price="19.90">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="item">
+      <figure class="thumb"><img src="./img/ninho com morango.jpeg" alt="Ninho com Morango"/></figure>
+      <h3 class="name">NINHO COM MORANGO</h3>
+      <div class="price">R$ 20,90</div>
+      <p class="desc">Massa de baunilha com morangos picados, finalizado com cobertura cremosa de ninho com pedaços de morangos.</p>
+      <button class="add-to-cart" data-name="NINHO COM MORANGO" data-price="20.90">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="item">
+      <figure class="thumb"><img src="./img/ferrero rocher.jpeg" alt="Ferrero Rocher"/></figure>
+      <h3 class="name">FERRERO ROCHER</h3>
+      <div class="price">R$ 22,90</div>
+      <p class="desc">Massa de chocolate, com recheio de avelã, finalizado com amendoim e bombom de ferrero rocher.</p>
+      <button class="add-to-cart" data-name="FERRERO ROCHER" data-price="22.90">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="item">
+      <figure class="thumb"><img src="./img/brigadeiro.jpeg" alt="Brigadeiro"/></figure>
+      <h3 class="name">BRIGADEIRO</h3>
+      <div class="price">R$ 19,90</div>
+      <p class="desc">Massa de chocolate com cobertura cremosa de brigadeiro, finalizado com granulado e brigadeiro.</p>
+      <button class="add-to-cart" data-name="BRIGADEIRO" data-price="19.90">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="item">
+      <figure class="thumb"><img src="./img/surpresa de uva.jpeg" alt="Surpresa de Uva"/></figure>
+      <h3 class="name">SURPRESA DE UVA</h3>
+      <div class="price">R$ 20,90</div>
+      <p class="desc">Massa de chocolate recheado com uvas, finalizado com cobertura cremosa de ninho, brigadeiro e pedaços de uva.</p>
+      <button class="add-to-cart" data-name="SURPRESA DE UVA" data-price="20.90">Adicionar ao Carrinho</button>
+    </article>
+
+  </section>
+
+  <p class="footnote">**SOB ENCOMENDAS**</p>
+</main>
+
+<!-- Modal do Carrinho -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-content">
+    <h2>🛒 Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: R$ 0,00</p>
+
+    <!-- Formulário de checkout -->
+    <form id="checkout-form">
+      <label>Nome:
+        <input type="text" name="name" placeholder="Seu nome" required/>
+      </label>
+
+      <!-- Botão para enviar pedido via WhatsApp -->
+      <button type="button" id="send-whatsapp">Confirmar pedido via WhatsApp</button>
+      <!-- Aviso de observação -->
+      <p class="obs-message">⚠️ Não trabalhamos com entrega. Retirada no local.</p>
+
+    </form>
+
+    <button id="close-cart">Fechar</button>
+  </div>
+</div>
+
+<script src="./css_js/cart.js"></script>
+<script src="./css_js/active-days.js"></script>
+</body>
+</html>
